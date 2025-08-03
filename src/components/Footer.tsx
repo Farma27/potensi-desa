@@ -14,6 +14,8 @@ const Footer = () => {
   ];
 
   const potensiLinks = [
+    { href: "/penangkaran", label: "Penangkaran Burung Hantu" },
+    { href: "/kebun-mangga", label: "Kebun Mangga Inovatif" },
     { href: "/potensi/ekonomi", label: "Potensi Ekonomi" },
     { href: "/potensi/pertanian", label: "Pertanian" },
     { href: "/potensi/kerajinan", label: "Kerajinan" },

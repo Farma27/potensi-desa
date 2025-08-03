@@ -48,13 +48,13 @@ export default function Home() {
                 SANG PENJAGA SAWAH
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Temukan bagaimana burung hantu menjadi pahlawan tak terduga dalam revolusi pertanian berkelanjutan di Desa Mekarjaya. Dari masalah hama tikus yang meresahkan petani, hingga lahirnya solusi inovatif penangkaran burung hantu yang mengubah cara bertani tradisional menjadi harmoni dengan alam.
               </p>
               <Link 
-                href="#" 
+                href="/penangkaran" 
                 className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
               >
-                Pelajari Lebih Lanjut
+                Kunjungi Penangkaran
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -72,10 +72,10 @@ export default function Home() {
                 INOVASI DARI LAHAN SEMPIT
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Saksikan bagaimana teknik revolusioner &ldquo;2 Meter&rdquo; mengubah lahan sempit menjadi kebun mangga produktif yang menghasilkan 5x lipat lebih banyak. Dari inspirasi pertanian Jepang hingga adaptasi lokal yang mengagumkan, temukan inovasi yang mengangkat kesejahteraan petani Mekarjaya.
               </p>
               <Link 
-                href="#" 
+                href="/kebun-mangga" 
                 className="inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300 shadow-md hover:shadow-lg"
               >
                 Lihat Kebun Kami
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/tentang" 
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-300"
             >
               Tentang Desa Kami
             </Link>
