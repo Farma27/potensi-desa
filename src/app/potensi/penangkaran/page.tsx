@@ -69,7 +69,7 @@ export default function PenangkaranPage() {
             <p className="text-lg text-black font-medium">
               &quot;Dari masalah hama menjadi harmoni alam - inilah cerita bagaimana burung hantu mengubah cara kami bertani&quot;
             </p>
-            </div>
+          </div>
         </div>
       </section>
 
@@ -89,18 +89,14 @@ export default function PenangkaranPage() {
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <h3 className="text-xl font-semibold text-red-600 mb-3">🚨 Tantangan Awal</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Pada tahun 2018, petani di Desa Mekarjaya menghadapi serangan hama tikus yang sangat parah. 
-                  Kerugian mencapai 60% dari total hasil panen. Penggunaan pestisida kimia semakin intensif, 
-                  namun malah menciptakan resistensi hama dan merusak ekosistem sawah.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laboriosam perferendis dolorem. Repellat ducimus dolorem provident. Ab obcaecati distinctio iste assumenda? Natus error aliquam tenetur deleniti dolor doloribus, veritatis architecto!
                 </p>
               </div>
               
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <h3 className="text-xl font-semibold text-blue-600 mb-3">💡 Inspirasi Solusi</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Pak Sartono, petani senior, terinspirasi dari pengamatan burung hantu liar yang efektif 
-                  memangsa tikus di sawahnya. Dengan bantuan ahli ornithologi dari universitas setempat, 
-                  lahirlah ide untuk membangun program penangkaran burung hantu sebagai pengendali hama alami.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, unde pariatur? Facilis eligendi hic alias dicta quas. Inventore eveniet molestiae similique temporibus ea consectetur, cum minus assumenda? Iusto qui quos corrupti. Harum facere nisi consequatur maxime ducimus ullam omnis obcaecati.
                 </p>
               </div>
             </div>
@@ -115,9 +111,7 @@ export default function PenangkaranPage() {
               🌟 Kelahiran Program Penangkaran
             </h3>
             <p className="text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-              Dimulai dengan 3 pasang burung Celepuk Jawa pada 2019, program ini berkembang menjadi 
-              pusat penangkaran yang mengelola berbagai spesies burung hantu. Kini, lebih dari 20 pasang 
-              burung hantu berperan aktif dalam menjaga keseimbangan ekosistem pertanian desa.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae labore accusantium saepe eos natus nam, alias sunt quaerat distinctio reprehenderit quos unde id vitae maxime est nobis autem necessitatibus nihil ipsum, ut molestiae! Atque, veritatis. Nostrum assumenda numquam accusantium dolore.
             </p>
           </div>
         </section>
@@ -174,7 +168,7 @@ export default function PenangkaranPage() {
                         ))}
                       </ul>
                       <Link 
-                        href={`/penangkaran/${burung.id}`}
+                        href={`/potensi/penangkaran/${burung.id}`}
                         className="inline-block mt-3 bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors"
                       >
                         Detail Lengkap

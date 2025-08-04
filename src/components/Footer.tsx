@@ -8,33 +8,26 @@ const Footer = () => {
     { href: "/", label: "Beranda" },
     { href: "/tentang", label: "Tentang Desa" },
     { href: "/potensi", label: "Potensi" },
-    { href: "/wisata", label: "Wisata" },
     { href: "/galeri", label: "Galeri" },
     { href: "/kontak", label: "Kontak" },
   ];
 
   const potensiLinks = [
-    { href: "/penangkaran", label: "Penangkaran Burung Hantu" },
-    { href: "/kebun-mangga", label: "Kebun Mangga Inovatif" },
-    { href: "/potensi/ekonomi", label: "Potensi Ekonomi" },
-    { href: "/potensi/pertanian", label: "Pertanian" },
-    { href: "/potensi/kerajinan", label: "Kerajinan" },
-    { href: "/potensi/umkm", label: "UMKM" },
+    { href: "/potensi/penangkaran", label: "Penangkaran Burung Hantu" },
+    { href: "/potensi/kebun-mangga", label: "Kebun Mangga Inovatif" },
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo dan Deskripsi */}
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <span className="font-bold text-xl">Mekarjaya</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              Website resmi yang menampilkan berbagai potensi dan keunggulan
-              desa kami. Temukan wisata, produk lokal, dan peluang investasi di
-              desa yang kaya akan budaya dan sumber daya alam.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident excepturi non iste autem nam facilis culpa, asperiores explicabo, ipsam, sed consectetur porro odit quibusdam!
             </p>
           </div>
 

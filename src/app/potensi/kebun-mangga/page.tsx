@@ -119,18 +119,14 @@ export default function KebunManggaPage() {
               <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-orange-500">
                 <h3 className="text-xl font-semibold text-orange-600 mb-3">🚧 Tantangan Lahan Sempit</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Tahun 2016, Pak Widodo hanya memiliki lahan 0,5 hektar warisan keluarga. Dengan metode tanam 
-                  konvensional (jarak 8x8 meter), ia hanya bisa menanam 78 pohon mangga. Hasil panen tidak cukup 
-                  untuk menghidupi keluarga dan menyekolahkan ketiga anaknya.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam unde dignissimos et. Reprehenderit distinctio, saepe a voluptas vel nulla dolore iste architecto odit mollitia incidunt consequatur harum fuga natus sit impedit modi!
                 </p>
               </div>
               
               <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-blue-500">
                 <h3 className="text-xl font-semibold text-blue-600 mb-3">💡 Inspirasi dari Jepang</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Setelah melihat video pertanian apel intensif di Jepang, Pak Widodo terinspirasi untuk mengadaptasi 
-                  teknik tersebut. Dengan bantuan penyuluh pertanian dan trial-error selama 2 tahun, lahirlah 
-                  &quot;Teknik 2 Meter&quot; yang revolusioner.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eligendi sit eaque ex doloribus nisi dicta, vitae in iste reiciendis odio corporis ipsam voluptatum omnis quam unde. Nemo totam optio repellat voluptas?
                 </p>
               </div>
             </div>

@@ -10,8 +10,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-import { cn } from "@/lib/utils"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,18 +20,13 @@ const Navbar = () => {
     { href: "/", label: "Beranda" },
     { href: "/tentang", label: "Tentang Desa" },
     { href: "/potensi", label: "Potensi" },
-    { href: "/wisata", label: "Wisata" },
     { href: "/galeri", label: "Galeri" },
     { href: "/kontak", label: "Kontak" },
   ]
 
   const potensiItems = [
-    { href: "/penangkaran", label: "Penangkaran Burung Hantu" },
-    { href: "/kebun-mangga", label: "Kebun Mangga Inovatif" },
-    { href: "/potensi/ekonomi", label: "Potensi Ekonomi" },
-    { href: "/potensi/pertanian", label: "Pertanian" },
-    { href: "/potensi/kerajinan", label: "Kerajinan" },
-    { href: "/potensi/umkm", label: "UMKM" },
+    { href: "/potensi/penangkaran", label: "Penangkaran Burung Hantu" },
+    { href: "/potensi/kebun-mangga", label: "Kebun Mangga Inovatif" },
   ]
 
   return (
@@ -65,8 +60,8 @@ const Navbar = () => {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Potensi</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <NavigationMenuContent className="left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto">
+                    <ul className="grid w-fit min-w-[200px] max-w-[350px] gap-2 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-1">
                       {potensiItems.map((item) => (
                         <li key={item.href}>
                           <NavigationMenuLink asChild>
@@ -87,14 +82,6 @@ const Navbar = () => {
 
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
-                    <Link href="/wisata" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                      Wisata
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
                     <Link href="/galeri" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
                       Galeri
                     </Link>
@@ -109,6 +96,7 @@ const Navbar = () => {
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
+              <NavigationMenuViewport className="origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]" />
             </NavigationMenu>
           </div>
 

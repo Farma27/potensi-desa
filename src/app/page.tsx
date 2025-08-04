@@ -16,7 +16,7 @@ export default function Home() {
             <span className="block text-green-600 mt-2">DESA MEKARJAYA</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Temukan kekayaan alam dan kearifan lokal yang membanggakan di jantung desa yang penuh potensi
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque cupiditate asperiores nisi. Quam, commodi?
           </p>
           <div className="mt-8">
             <Link 
@@ -48,10 +48,10 @@ export default function Home() {
                 SANG PENJAGA SAWAH
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Temukan bagaimana burung hantu menjadi pahlawan tak terduga dalam revolusi pertanian berkelanjutan di Desa Mekarjaya. Dari masalah hama tikus yang meresahkan petani, hingga lahirnya solusi inovatif penangkaran burung hantu yang mengubah cara bertani tradisional menjadi harmoni dengan alam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ullam cum libero repellendus consequatur adipisci itaque, expedita laboriosam sequi. Totam, iusto nesciunt natus temporibus adipisci ullam nemo at neque beatae, recusandae pariatur quia corrupti optio consequatur quae?
               </p>
               <Link 
-                href="/penangkaran" 
+                href="/potensi/penangkaran" 
                 className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
               >
                 Kunjungi Penangkaran
@@ -72,10 +72,10 @@ export default function Home() {
                 INOVASI DARI LAHAN SEMPIT
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Saksikan bagaimana teknik revolusioner &ldquo;2 Meter&rdquo; mengubah lahan sempit menjadi kebun mangga produktif yang menghasilkan 5x lipat lebih banyak. Dari inspirasi pertanian Jepang hingga adaptasi lokal yang mengagumkan, temukan inovasi yang mengangkat kesejahteraan petani Mekarjaya.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id in minima consequatur et sit quia sed perferendis accusamus dolore. Velit, numquam distinctio. Cum temporibus consectetur reprehenderit facilis beatae nobis tempore porro. Tempora.
               </p>
               <Link 
-                href="/kebun-mangga" 
+                href="/potensi/kebun-mangga" 
                 className="inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300 shadow-md hover:shadow-lg"
               >
                 Lihat Kebun Kami
