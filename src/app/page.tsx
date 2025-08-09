@@ -1,13 +1,29 @@
 // import Image from "next/image";
 import Link from "next/link";
+import { ImageKitImage } from "@/components/ImageKit";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-blue-50">
-        {/* Background Image Placeholder */}
-        <div className="absolute inset-0 bg-gray-400 opacity-20"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <ImageKitImage
+            src="/Hero%20Section%20Background.webp"
+            alt="Hero Section Background - Desa Mekarjaya"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover opacity-30"
+            transformation={[
+              {
+                quality: 80,
+                format: 'webp'
+              }
+            ]}
+            priority={true}
+          />
+        </div>
         
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
@@ -37,9 +53,20 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1">
-              <div className="bg-gray-400 h-96 rounded-lg shadow-lg flex items-center justify-center">
-                <span className="text-white text-lg font-medium">Foto Burung Hantu di Sawah</span>
-              </div>
+              <ImageKitImage
+                src="/burung-hantu.jpg"
+                alt="Burung Hantu - Sang Penjaga Sawah Desa Mekarjaya"
+                width={600}
+                height={400}
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                transformation={[
+                  {
+                    quality: 85,
+                    format: 'webp'
+                  }
+                ]}
+                loading="lazy"
+              />
             </div>
             
             {/* Content */}
@@ -87,9 +114,20 @@ export default function Home() {
             
             {/* Image */}
             <div>
-              <div className="bg-gray-400 h-96 rounded-lg shadow-lg flex items-center justify-center">
-                <span className="text-white text-lg font-medium">Foto Kebun Mangga</span>
-              </div>
+              <ImageKitImage
+                src="/kebun-mangga.jpg"
+                alt="Kebun Mangga - Inovasi dari Lahan Sempit Desa Mekarjaya"
+                width={600}
+                height={400}
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                transformation={[
+                  {
+                    quality: 85,
+                    format: 'webp'
+                  }
+                ]}
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
