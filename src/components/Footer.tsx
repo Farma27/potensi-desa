@@ -100,28 +100,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
             <p>
-              &copy; {currentYear} Mekarjaya. Semua hak cipta dilindungi.
+              &copy; {currentYear} KKNM Universitas Subang. Semua hak cipta dilindungi.
             </p>
-          </div>
-          <div className="flex space-x-6 text-sm">
-            <Link
-              href="/privacy"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Kebijakan Privasi
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Syarat & Ketentuan
-            </Link>
-            <Link
-              href="/sitemap"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Peta Situs
-            </Link>
           </div>
         </div>
       </div>

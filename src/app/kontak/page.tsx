@@ -1,5 +1,9 @@
 import { ImageKitImage } from "@/components/ImageKit";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import GoogleMapsButton from "@/components/GoogleMapsButton";
+import DirectionsInfo from "@/components/DirectionsInfo";
+import ContactForm from "@/components/ContactForm";
+import MapWrapper from "@/components/MapWrapper";
 import { Metadata } from "next";
 import { 
   MapPin, 
@@ -8,8 +12,7 @@ import {
   Clock, 
   MessageSquare, 
   Users, 
-  Calendar,
-  ExternalLink
+  Calendar
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -28,7 +31,7 @@ export default function KontakPage() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Alamat Kantor Desa",
-      content: "Jl. Raya Mekarjaya No. 123\nKec. Cianjur Selatan\nKab. Cianjur, Jawa Barat 43253",
+      content: "Jl. Raya Mekarjaya No. 123\nDesa Mekarjaya\nJawa Barat",
       color: "text-red-600",
       bgColor: "bg-red-50"
     },
@@ -278,119 +281,7 @@ export default function KontakPage() {
 
         {/* Formulir Kontak */}
         <section className="mb-16">
-          <div className="max-w-4xl mx-auto">
-            <Card className="shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-3xl text-center">Kirim Pesan Kepada Kami</CardTitle>
-                <p className="text-center text-gray-600 mt-2">
-                  Isi formulir di bawah ini untuk menghubungi kami. Kami akan merespons dalam 1x24 jam.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="nama" className="block text-sm font-medium text-gray-700 mb-2">
-                        Nama Lengkap *
-                      </label>
-                      <input
-                        type="text"
-                        id="nama"
-                        name="nama"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Masukkan nama lengkap Anda"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="nama@email.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="telepon" className="block text-sm font-medium text-gray-700 mb-2">
-                        Nomor Telepon
-                      </label>
-                      <input
-                        type="tel"
-                        id="telepon"
-                        name="telepon"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="+62 812-3456-7890"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="instansi" className="block text-sm font-medium text-gray-700 mb-2">
-                        Instansi/Organisasi
-                      </label>
-                      <input
-                        type="text"
-                        id="instansi"
-                        name="instansi"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Nama instansi atau organisasi"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="tujuan" className="block text-sm font-medium text-gray-700 mb-2">
-                      Tujuan Kontak *
-                    </label>
-                    <select
-                      id="tujuan"
-                      name="tujuan"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">Pilih tujuan kontak</option>
-                      <option value="kunjungan-edukasi">Kunjungan Edukasi</option>
-                      <option value="studi-banding">Studi Banding</option>
-                      <option value="penelitian">Penelitian & PKM</option>
-                      <option value="kerjasama">Proposal Kerjasama</option>
-                      <option value="media">Liputan Media</option>
-                      <option value="informasi">Permintaan Informasi</option>
-                      <option value="lainnya">Lainnya</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="pesan" className="block text-sm font-medium text-gray-700 mb-2">
-                      Pesan *
-                    </label>
-                    <textarea
-                      id="pesan"
-                      name="pesan"
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tuliskan pesan, pertanyaan, atau detail kebutuhan Anda di sini..."
-                    ></textarea>
-                  </div>
-
-                  <div className="text-center">
-                    <button
-                      type="submit"
-                      className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    >
-                      Kirim Pesan
-                    </button>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+          <ContactForm />
         </section>
 
         {/* Peta dan Lokasi */}
@@ -406,18 +297,69 @@ export default function KontakPage() {
             <div className="lg:col-span-2">
               <Card className="h-full">
                 <CardContent className="p-0">
-                  <div className="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <MapPin className="w-12 h-12 mx-auto mb-4" />
-                      <p className="text-lg font-semibold">Peta Interaktif</p>
-                      <p className="text-sm">
-                        Peta lokasi Desa Mekarjaya akan ditampilkan di sini
-                      </p>
-                      <p className="text-xs mt-2">
-                        (Integrasi dengan Google Maps atau layanan peta lainnya)
-                      </p>
-                    </div>
-                  </div>
+                  <MapWrapper
+                    center={[-6.375051255681708, 107.88828558866066]} // Koordinat Kantor Desa Mekarjaya
+                    zoom={14}
+                    height="450px"
+                    className="shadow-lg"
+                    style="hybrid" // Menggunakan hybrid view seperti Google Maps
+                    showLayerControl={true}
+                    markers={[
+                      {
+                        position: [-6.375051255681708, 107.88828558866066],
+                        popup: `
+                          <div style="min-width: 200px;">
+                            <h3 style="font-weight: bold; font-size: 16px; margin-bottom: 8px; color: #1f2937;">
+                              🏛️ Kantor Desa Mekarjaya
+                            </h3>
+                            <p style="color: #6b7280; margin-bottom: 8px; font-size: 14px;">
+                              Desa Mekarjaya, Jawa Barat
+                            </p>
+                            <div style="border-top: 1px solid #e5e7eb; padding-top: 8px; margin-top: 8px;">
+                              <p style="font-size: 12px; color: #9ca3af;">
+                                📍 Koordinat: -6.375051, 107.888286
+                              </p>
+                            </div>
+                          </div>
+                        `,
+                        title: "Kantor Desa Mekarjaya"
+                      },
+                      {
+                        position: [-6.380388180319351, 107.8945014869351],
+                        popup: `
+                          <div style="min-width: 180px;">
+                            <h3 style="font-weight: bold; font-size: 14px; margin-bottom: 6px; color: #1f2937;">
+                              🥭 Kebun Mangga Organik
+                            </h3>
+                            <p style="color: #6b7280; font-size: 13px;">
+                              Wisata agro unggulan desa
+                            </p>
+                            <p style="font-size: 11px; color: #9ca3af; margin-top: 4px;">
+                              📍 -6.380388, 107.894501
+                            </p>
+                          </div>
+                        `,
+                        title: "Kebun Mangga Organik"
+                      },
+                      {
+                        position: [-6.375938357271789, 107.90264097931646],
+                        popup: `
+                          <div style="min-width: 180px;">
+                            <h3 style="font-weight: bold; font-size: 14px; margin-bottom: 6px; color: #1f2937;">
+                              🦉 Penangkaran Burung Hantu
+                            </h3>
+                            <p style="color: #6b7280; font-size: 13px;">
+                              Konservasi fauna lokal
+                            </p>
+                            <p style="font-size: 11px; color: #9ca3af; margin-top: 4px;">
+                              📍 -6.375938, 107.902641
+                            </p>
+                          </div>
+                        `,
+                        title: "Penangkaran Burung Hantu"
+                      }
+                    ]}
+                  />
                 </CardContent>
               </Card>
             </div>
@@ -430,15 +372,15 @@ export default function KontakPage() {
                 <CardContent className="space-y-4">
                   <div>
                     <p className="font-semibold text-gray-700 mb-1">Dari Jakarta:</p>
-                    <p className="text-gray-600 text-sm">2,5 jam via Tol Cipularang - Cianjur</p>
+                    <p className="text-gray-600 text-sm">3 jam via Tol Jagorawi - Sukabumi</p>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-700 mb-1">Dari Bandung:</p>
-                    <p className="text-gray-600 text-sm">1,5 jam via Jalan Raya Cianjur</p>
+                    <p className="text-gray-600 text-sm">2 jam via Jl. Raya Bandung-Sukabumi</p>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-700 mb-1">Transportasi Umum:</p>
-                    <p className="text-gray-600 text-sm">Bus DAMRI + Angkot lokal</p>
+                    <p className="text-gray-600 text-sm">Bus ke Terminal Sukabumi + Angkot</p>
                   </div>
                 </CardContent>
               </Card>
@@ -450,19 +392,25 @@ export default function KontakPage() {
                 <CardContent>
                   <div className="space-y-2">
                     <p className="text-sm text-gray-600">
-                      <span className="font-semibold">Latitude:</span> -6.8175° S
+                      <span className="font-semibold">Latitude:</span> -6.375051° S
                     </p>
                     <p className="text-sm text-gray-600">
-                      <span className="font-semibold">Longitude:</span> 107.1390° E
+                      <span className="font-semibold">Longitude:</span> 107.888286° E
                     </p>
-                    <button className="text-blue-600 hover:text-blue-700 text-sm flex items-center mt-3">
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      Buka di Google Maps
-                    </button>
+                    <GoogleMapsButton
+                      latitude={-6.375051255681708}
+                      longitude={107.88828558866066}
+                      className="mt-3"
+                    />
                   </div>
                 </CardContent>
               </Card>
             </div>
+          </div>
+
+          {/* Panduan Perjalanan */}
+          <div className="mt-8">
+            <DirectionsInfo />
           </div>
         </section>
 
