@@ -1,103 +1,161 @@
-import Image from "next/image";
+// import Image from "next/image";
+import Link from "next/link";
+import { ImageKitImage } from "@/components/ImageKit";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-blue-50">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <ImageKitImage
+            src="/Hero%20Section%20Background.webp"
+            alt="Hero Section Background - Desa Mekarjaya"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover opacity-30"
+            transformation={[
+              {
+                quality: 80,
+                format: 'webp'
+              }
+            ]}
+            priority={true}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6">
+            MENJELAJAHI KEAJAIBAN TERSEMBUNYI
+            <span className="block text-green-600 mt-2">DESA MEKARJAYA</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque cupiditate asperiores nisi. Quam, commodi?
+          </p>
+          <div className="mt-8">
+            <Link 
+              href="#potensi" 
+              className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            >
+              Jelajahi Potensi Kami
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="potensi">
+        
+        {/* First Section */}
+        <section className="mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="order-2 lg:order-1">
+              <ImageKitImage
+                src="/burung-hantu.jpg"
+                alt="Burung Hantu - Sang Penjaga Sawah Desa Mekarjaya"
+                width={600}
+                height={400}
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                transformation={[
+                  {
+                    quality: 85,
+                    format: 'webp'
+                  }
+                ]}
+                loading="lazy"
+              />
+            </div>
+            
+            {/* Content */}
+            <div className="order-1 lg:order-2">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
+                SANG PENJAGA SAWAH
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ullam cum libero repellendus consequatur adipisci itaque, expedita laboriosam sequi. Totam, iusto nesciunt natus temporibus adipisci ullam nemo at neque beatae, recusandae pariatur quia corrupti optio consequatur quae?
+              </p>
+              <Link 
+                href="/potensi/penangkaran" 
+                className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
+              >
+                Kunjungi Penangkaran
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Second Section */}
+        <section className="mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
+                INOVASI DARI LAHAN SEMPIT
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id in minima consequatur et sit quia sed perferendis accusamus dolore. Velit, numquam distinctio. Cum temporibus consectetur reprehenderit facilis beatae nobis tempore porro. Tempora.
+              </p>
+              <Link 
+                href="/potensi/kebun-mangga" 
+                className="inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300 shadow-md hover:shadow-lg"
+              >
+                Lihat Kebun Kami
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+            
+            {/* Image */}
+            <div>
+              <ImageKitImage
+                src="/kebun-mangga.jpg"
+                alt="Kebun Mangga - Inovasi dari Lahan Sempit Desa Mekarjaya"
+                width={600}
+                height={400}
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                transformation={[
+                  {
+                    quality: 85,
+                    format: 'webp'
+                  }
+                ]}
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-xl px-8 py-16 text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Bergabunglah dengan Perjalanan Kami
+          </h2>
+          <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto">
+            Temukan lebih banyak potensi tersembunyi dan jadilah bagian dari cerita kemajuan Desa Mekarjaya
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/tentang" 
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-300"
+            >
+              Tentang Desa Kami
+            </Link>
+            <Link 
+              href="/kontak" 
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-300"
+            >
+              Hubungi Kami
+            </Link>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
