@@ -6,7 +6,7 @@ const Footer = () => {
 
   const quickLinks = [
     { href: "/", label: "Beranda" },
-    { href: "/tentang", label: "Tentang Desa" },
+    { href: "/tentang", label: "Tentang Kami" },
     { href: "/potensi", label: "Potensi" },
     { href: "/galeri", label: "Galeri" },
     { href: "/kontak", label: "Kontak" },

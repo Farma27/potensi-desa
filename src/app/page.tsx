@@ -1,6 +1,8 @@
 // import Image from "next/image";
 import Link from "next/link";
 import { ImageKitImage } from "@/components/ImageKit";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -37,7 +39,7 @@ export default function Home() {
           <div className="mt-8">
             <Link 
               href="#potensi" 
-              className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className={cn(buttonVariants({ variant: "default", size: "lg" }), "text-lg font-semibold shadow-lg hover:shadow-xl")}
             >
               Jelajahi Potensi Kami
             </Link>
