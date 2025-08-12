@@ -9,10 +9,6 @@ import {
   MapPin, 
   Phone, 
   Mail, 
-  Clock, 
-  MessageSquare, 
-  Users, 
-  Calendar
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -48,33 +44,10 @@ export default function KontakPage() {
       content: "info@mekarjaya-desa.id\nkepala.desa@mekarjaya-desa.id",
       color: "text-blue-600",
       bgColor: "bg-blue-50"
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Jam Layanan",
-      content: "Senin - Jumat: 08.00 - 16.00 WIB\nSabtu: 08.00 - 12.00 WIB\nMinggu: Tutup",
-      color: "text-purple-600",
-      bgColor: "bg-purple-50"
     }
   ];
 
   const contactPersons = [
-    {
-      name: "Bapak Sutrisno",
-      position: "Kepala Desa Mekarjaya",
-      phone: "+62 812-1111-2222",
-      email: "kepala.desa@mekarjaya-desa.id",
-      expertise: "Kebijakan Desa & Kerjasama Strategis",
-      image: "/profile-kepala-desa.webp"
-    },
-    {
-      name: "Ibu Ratna Sari",
-      position: "Sekretaris Desa",
-      phone: "+62 812-3333-4444",
-      email: "sekretaris@mekarjaya-desa.id",
-      expertise: "Administrasi & Koordinasi Program",
-      image: "/profile-sekretaris.webp"
-    },
     {
       name: "Bapak Ahmad Hidayat",
       position: "Koordinator Program Konservasi",
@@ -90,33 +63,6 @@ export default function KontakPage() {
       email: "pertanian@mekarjaya-desa.id",
       expertise: "Budidaya Mangga & Pertanian Organik",
       image: "/profile-ketua-tani.webp"
-    }
-  ];
-
-  const visitTypes = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Kunjungan Edukasi",
-      description: "Ideal untuk sekolah, universitas, dan lembaga pendidikan yang ingin belajar tentang praktik berkelanjutan.",
-      duration: "Half day (4 jam) atau Full day (8 jam)",
-      capacity: "10-50 orang",
-      includes: ["Presentasi program desa", "Tur fasilitas", "Interaksi dengan narasumber", "Dokumentasi kegiatan"]
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8" />,
-      title: "Studi Banding",
-      description: "Program khusus untuk pemerintah daerah dan organisasi yang ingin menerapkan model serupa.",
-      duration: "1-3 hari",
-      capacity: "5-30 orang",
-      includes: ["Workshop intensif", "Sharing best practices", "Konsultasi implementasi", "Materi pembelajaran"]
-    },
-    {
-      icon: <Calendar className="w-8 h-8" />,
-      title: "Penelitian & PKM",
-      description: "Fasilitas untuk mahasiswa, peneliti, dan dosen yang ingin melakukan penelitian atau pengabdian masyarakat.",
-      duration: "Fleksibel (sesuai kebutuhan)",
-      capacity: "1-20 orang",
-      includes: ["Akses data dan informasi", "Pendampingan narasumber", "Tempat penelitian", "Surat keterangan"]
     }
   ];
 
@@ -223,65 +169,6 @@ export default function KontakPage() {
               </Card>
             ))}
           </div>
-        </section>
-
-        {/* Jenis Kunjungan */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Jenis Kunjungan</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Kami menyambut berbagai jenis kunjungan sesuai dengan tujuan dan kebutuhan Anda. 
-              Silakan pilih jenis kunjungan yang paling sesuai.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {visitTypes.map((visit, index) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="text-white">
-                        {visit.icon}
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl">{visit.title}</CardTitle>
-                  </div>
-                  <p className="text-gray-600 text-center leading-relaxed">
-                    {visit.description}
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <p className="font-semibold text-gray-700 mb-1">Durasi:</p>
-                      <p className="text-gray-600 text-sm">{visit.duration}</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-700 mb-1">Kapasitas:</p>
-                      <p className="text-gray-600 text-sm">{visit.capacity}</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-700 mb-2">Termasuk:</p>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        {visit.includes.map((item, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-green-500 mr-2">•</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Formulir Kontak */}
-        <section className="mb-16">
-          <ContactForm />
         </section>
 
         {/* Peta dan Lokasi */}
@@ -406,11 +293,6 @@ export default function KontakPage() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-
-          {/* Panduan Perjalanan */}
-          <div className="mt-8">
-            <DirectionsInfo />
           </div>
         </section>
 
