@@ -34,8 +34,8 @@ export default function KebunManggaPage() {
             <p className="text-lg text-gray-600">Filosofi dan inspirasi dibalik inovasi</p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-            <div className="space-y-6">
+          <div className="mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-orange-500">
                 <h3 className="text-xl font-semibold text-orange-600 mb-3">🚧 Tantangan Lahan Sempit</h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -49,10 +49,6 @@ export default function KebunManggaPage() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eligendi sit eaque ex doloribus nisi dicta, vitae in iste reiciendis odio corporis ipsam voluptatum omnis quam unde. Nemo totam optio repellat voluptas?
                 </p>
               </div>
-            </div>
-            
-            <div className="bg-gray-400 h-96 rounded-lg shadow-lg flex items-center justify-center">
-              <span className="text-white text-lg font-medium">Foto Pak Iwan di Kebun</span>
             </div>
           </div>
           

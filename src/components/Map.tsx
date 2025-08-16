@@ -202,13 +202,30 @@ export default function Map({
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative z-10" style={{ zIndex: 10 }}>
       <div 
         ref={mapRef} 
-        style={{ height }} 
+        style={{ height, zIndex: 10 }} 
         className={`w-full rounded-lg border-2 border-gray-200 ${className}`}
       />
       <style jsx global>{`
+        /* Pastikan Leaflet tidak menutupi navbar */
+        .leaflet-container {
+          z-index: 10 !important;
+        }
+        
+        .leaflet-control-container {
+          z-index: 15 !important;
+        }
+        
+        .leaflet-popup-pane {
+          z-index: 20 !important;
+        }
+        
+        .leaflet-tooltip-pane {
+          z-index: 25 !important;
+        }
+        
         /* Google Maps style marker */
         .marker-pin {
           width: 30px;

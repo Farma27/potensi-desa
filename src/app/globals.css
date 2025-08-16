@@ -191,3 +191,29 @@
     border: none !important;
   }
 }
+
+/* Fix untuk z-index masalah peta yang menutupi navbar */
+.leaflet-container {
+  z-index: 10 !important;
+}
+
+.leaflet-control-container {
+  z-index: 15 !important;
+}
+
+.leaflet-control-container .leaflet-control {
+  z-index: 15 !important;
+}
+
+.leaflet-popup-pane {
+  z-index: 20 !important;
+}
+
+.leaflet-tooltip-pane {
+  z-index: 25 !important;
+}
+
+/* Memastikan navbar tetap di atas semua elemen */
+nav.sticky {
+  z-index: 50 !important;
+}

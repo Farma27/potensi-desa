@@ -3,8 +3,31 @@
 // import Image from "next/image"
 import Link from "next/link";
 import { ImageKitImage } from "@/components/ImageKit";
+import ImageModal from "@/components/ImageModal";
+import { useState } from "react";
+import { Eye } from "lucide-react";
 
 export default function PenangkaranPage() {
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+  } | null>(null);
+
+  const openImageModal = (fasilitas: typeof fasilitasPenangkaran[0]) => {
+    setSelectedImage({
+      src: fasilitas.gambar,
+      alt: fasilitas.nama,
+      title: fasilitas.nama,
+      description: fasilitas.deskripsi
+    });
+  };
+
+  const closeImageModal = () => {
+    setSelectedImage(null);
+  };
+
   const statistikDampak = [
     {
       angka: "75%",
@@ -39,7 +62,7 @@ export default function PenangkaranPage() {
       nama: "Rumah Burung Dewasa",
       deskripsi:
         "Habitat semi-alami untuk burung hantu yang siap berkembang biak",
-      gambar: "/images/fasilitas/rumah-burung.jpg",
+      gambar: "/rumah-burung-hantu.jpg",
     },
   ];
 
@@ -75,13 +98,13 @@ export default function PenangkaranPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-semibold text-red-600 mb-3">
-                  🚨 Tantangan Awal
+          <div className="mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-lg p-8 shadow-lg border-l-4 border-red-500">
+                <h3 className="text-xl font-semibold text-red-600 mb-4 flex items-center">
+                  🚨 <span className="ml-2">Tantangan Awal</span>
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-lg">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
                   laboriosam perferendis dolorem. Repellat ducimus dolorem
                   provident. Ab obcaecati distinctio iste assumenda? Natus error
@@ -90,11 +113,11 @@ export default function PenangkaranPage() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-semibold text-blue-600 mb-3">
-                  💡 Inspirasi Solusi
+              <div className="bg-white rounded-lg p-8 shadow-lg border-l-4 border-blue-500">
+                <h3 className="text-xl font-semibold text-blue-600 mb-4 flex items-center">
+                  💡 <span className="ml-2">Inspirasi Solusi</span>
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-lg">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
                   unde pariatur? Facilis eligendi hic alias dicta quas.
                   Inventore eveniet molestiae similique temporibus ea
@@ -103,23 +126,6 @@ export default function PenangkaranPage() {
                   obcaecati.
                 </p>
               </div>
-            </div>
-
-            <div className="rounded-lg shadow-lg overflow-hidden">
-              <ImageKitImage
-                src="/Timeline.png"
-                alt="Timeline Pengembangan Penangkaran Burung Hantu"
-                width={600}
-                height={400}
-                className="w-full h-88 object-cover rounded-lg shadow-lg"
-                transformation={[
-                  {
-                    quality: 85,
-                    format: "webp",
-                  },
-                ]}
-                loading="lazy"
-              />
             </div>
           </div>
         </section>
@@ -192,7 +198,7 @@ export default function PenangkaranPage() {
           </div>
         </section>
 
-        {/* Sub-Bagian 4: Di Balik Layar Penangkaran */}
+        {/* Di Balik Layar Penangkaran */}
         <section className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
@@ -204,15 +210,15 @@ export default function PenangkaranPage() {
             {fasilitasPenangkaran.map((fasilitas, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
+                className="bg-white rounded-lg shadow-lg overflow-hidden group"
               >
-                <div className="h-48 overflow-hidden">
+                <div className="h-80 overflow-hidden relative cursor-pointer group-hover:shadow-lg transition-shadow duration-300">
                   <ImageKitImage
                     src={fasilitas.gambar}
                     alt={fasilitas.nama}
                     width={400}
-                    height={200}
-                    className="w-full h-full object-cover rounded-lg shadow-lg"
+                    height={500}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     transformation={[
                       {
                         quality: 85,
@@ -221,14 +227,36 @@ export default function PenangkaranPage() {
                     ]}
                     loading="lazy"
                   />
+                  {/* Overlay dengan icon untuk fullscreen */}
+                  <div 
+                    className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"
+                    onClick={() => openImageModal(fasilitas)}
+                  >
+                    <div className="transform scale-0 group-hover:scale-100 transition-transform duration-300 delay-100">
+                      <div className="bg-white bg-opacity-95 rounded-full p-4 shadow-xl border-2 border-white">
+                        <Eye className="w-8 h-8 text-gray-700" />
+                      </div>
+                    </div>
+                  </div>
+                  {/* Badge di pojok kiri atas */}
+                  <div className="absolute top-3 left-3 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    Fasilitas
+                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-3">
                     {fasilitas.nama}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed mb-4">
                     {fasilitas.deskripsi}
                   </p>
+                  <button
+                    onClick={() => openImageModal(fasilitas)}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-all duration-200 hover:shadow-md"
+                  >
+                    <Eye className="w-4 h-4 mr-2" />
+                    Lihat Gambar Penuh
+                  </button>
                 </div>
               </div>
             ))}
@@ -260,6 +288,18 @@ export default function PenangkaranPage() {
           </div>
         </section>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={closeImageModal}
+          src={selectedImage.src}
+          alt={selectedImage.alt}
+          title={selectedImage.title}
+          description={selectedImage.description}
+        />
+      )}
     </div>
   );
 }

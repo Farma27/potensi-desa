@@ -182,13 +182,13 @@ export default function KontakPage() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <Card className="h-full">
+              <Card className="h-full relative z-10">
                 <CardContent className="p-0">
                   <MapWrapper
                     center={[-6.375051255681708, 107.88828558866066]} // Koordinat Kantor Desa Mekarjaya
                     zoom={14}
                     height="450px"
-                    className="shadow-lg"
+                    className="shadow-lg z-10 relative"
                     style="hybrid" // Menggunakan hybrid view seperti Google Maps
                     showLayerControl={true}
                     markers={[
