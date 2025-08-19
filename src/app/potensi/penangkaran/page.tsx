@@ -105,11 +105,11 @@ export default function PenangkaranPage() {
                   🚨 <span className="ml-2">Tantangan Awal</span>
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-                  laboriosam perferendis dolorem. Repellat ducimus dolorem
-                  provident. Ab obcaecati distinctio iste assumenda? Natus error
-                  aliquam tenetur deleniti dolor doloribus, veritatis
-                  architecto!
+                  Desa Mekarjaya menghadapi masalah serius dengan hama tikus
+                  yang merusak tanaman padi. Petani menghabiskan banyak uang
+                  untuk pestisida kimia, namun hasilnya tidak memuaskan.
+                  Kerusakan panen mencapai 30% setiap musim, mengancam
+                  ketahanan pangan desa.
                 </p>
               </div>
 
@@ -118,12 +118,11 @@ export default function PenangkaranPage() {
                   💡 <span className="ml-2">Inspirasi Solusi</span>
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
-                  unde pariatur? Facilis eligendi hic alias dicta quas.
-                  Inventore eveniet molestiae similique temporibus ea
-                  consectetur, cum minus assumenda? Iusto qui quos corrupti.
-                  Harum facere nisi consequatur maxime ducimus ullam omnis
-                  obcaecati.
+                  Untuk mengatasi masalah ini, Desa Mekarjaya mengadopsi
+                  pendekatan inovatif dengan melibatkan burung hantu sebagai
+                  predator alami hama tikus. Program penangkaran burung hantu
+                  diluncurkan untuk meningkatkan populasi burung hantu di
+                  sekitar area persawahan.
                 </p>
               </div>
             </div>

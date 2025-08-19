@@ -3,7 +3,6 @@
 import dynamic from 'next/dynamic';
 import { MapPin } from 'lucide-react';
 
-// Dynamic import untuk menghindari SSR issues dengan Leaflet
 const Map = dynamic(() => import("@/components/Map"), {
   ssr: false,
   loading: () => (

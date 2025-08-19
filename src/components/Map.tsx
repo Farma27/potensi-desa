@@ -58,7 +58,7 @@ export default function Map({
 
       // Satellite imagery
       const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community',
+        attribution: '',
         maxZoom: 18,
       });
 
@@ -131,29 +131,21 @@ export default function Map({
       }
     });
 
-    // Tambahkan marker dengan ikon custom yang lebih mirip Google Maps
+    // Tambahkan marker dengan ikon default atau custom
     markers.forEach((markerData, index) => {
-      const customIcon = L.divIcon({
-        className: 'custom-marker-google-style',
-        html: `
-          <div class="marker-pin">
-            <div class="marker-icon">📍</div>
-          </div>
-          <div class="marker-shadow"></div>
-        `,
-        iconSize: [30, 42],
-        iconAnchor: [15, 42],
-        popupAnchor: [0, -42]
-      });
-
-      const marker = L.marker(markerData.position, { icon: customIcon });
+      // Gunakan ikon default Leaflet yang sudah terbukti bekerja
+      const marker = L.marker(markerData.position);
       
       if (markerData.popup) {
         marker.bindPopup(markerData.popup, {
           maxWidth: 300,
+          minWidth: 200,
           className: 'custom-popup-google-style',
           closeButton: true,
-          autoPan: true
+          autoPan: true,
+          keepInView: true,
+          autoClose: false,
+          closeOnEscapeKey: true
         });
       }
       
@@ -167,6 +159,14 @@ export default function Map({
       }
       
       marker.addTo(map);
+      
+      // Tambahkan event listener khusus untuk marker click
+      marker.on('click', function() {
+        console.log('Marker clicked:', markerData.title);
+        if (markerData.popup) {
+          marker.openPopup();
+        }
+      });
 
       // Auto open popup for first marker
       if (index === 0 && markerData.popup) {
@@ -202,97 +202,118 @@ export default function Map({
   }, []);
 
   return (
-    <div className="relative z-10" style={{ zIndex: 10 }}>
+    <div className="relative" style={{ position: 'relative' }}>
       <div 
         ref={mapRef} 
-        style={{ height, zIndex: 10 }} 
+        style={{ height, position: 'relative', zIndex: 1 }} 
         className={`w-full rounded-lg border-2 border-gray-200 ${className}`}
       />
       <style jsx global>{`
-        /* Pastikan Leaflet tidak menutupi navbar */
+        /* Pastikan Leaflet tidak menutupi navbar dan popup terlihat */
         .leaflet-container {
-          z-index: 10 !important;
+          z-index: 1 !important;
         }
         
         .leaflet-control-container {
-          z-index: 15 !important;
+          z-index: 100 !important;
         }
         
         .leaflet-popup-pane {
-          z-index: 20 !important;
+          z-index: 1000 !important;
         }
         
         .leaflet-tooltip-pane {
-          z-index: 25 !important;
+          z-index: 1001 !important;
         }
         
-        /* Google Maps style marker */
-        .marker-pin {
-          width: 30px;
-          height: 30px;
-          border-radius: 50% 50% 50% 0;
-          background: #ea4335;
-          position: absolute;
-          transform: rotate(-45deg);
-          left: 50%;
-          top: 50%;
-          margin: -20px 0 0 -20px;
-          border: 3px solid #ffffff;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        .leaflet-marker-pane {
+          z-index: 500 !important;
         }
         
-        .marker-pin::after {
-          content: '';
-          width: 14px;
-          height: 14px;
-          margin: 8px 0 0 8px;
-          background: #ffffff;
-          position: absolute;
-          border-radius: 50%;
+        .leaflet-overlay-pane {
+          z-index: 400 !important;
         }
         
-        .marker-icon {
-          position: absolute;
-          width: 22px;
-          height: 22px;
-          color: white;
-          font-size: 12px;
-          left: 4px;
-          top: 4px;
-          transform: rotate(45deg);
-          text-align: center;
-          line-height: 22px;
+        /* Google Maps style marker - Enhanced */
+        .custom-marker-google-style .marker-pin {
+          width: 30px !important;
+          height: 30px !important;
+          border-radius: 50% 50% 50% 0 !important;
+          background: #ea4335 !important;
+          position: absolute !important;
+          transform: rotate(-45deg) !important;
+          left: 50% !important;
+          top: 50% !important;
+          margin: -20px 0 0 -20px !important;
+          border: 3px solid #ffffff !important;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
         }
         
-        .marker-shadow {
-          width: 35px;
-          height: 16px;
-          background: rgba(0,0,0,0.2);
-          border-radius: 50%;
-          position: absolute;
-          left: 50%;
-          bottom: -8px;
-          margin-left: -17px;
-          filter: blur(2px);
+        .custom-marker-google-style .marker-pin::after {
+          content: '' !important;
+          width: 14px !important;
+          height: 14px !important;
+          margin: 8px 0 0 8px !important;
+          background: #ffffff !important;
+          position: absolute !important;
+          border-radius: 50% !important;
+        }
+        
+        .custom-marker-google-style .marker-icon {
+          position: absolute !important;
+          width: 22px !important;
+          height: 22px !important;
+          color: white !important;
+          font-size: 12px !important;
+          left: 4px !important;
+          top: 4px !important;
+          transform: rotate(45deg) !important;
+          text-align: center !important;
+          line-height: 22px !important;
+        }
+        
+        .custom-marker-google-style .marker-shadow {
+          width: 35px !important;
+          height: 16px !important;
+          background: rgba(0,0,0,0.2) !important;
+          border-radius: 50% !important;
+          position: absolute !important;
+          left: 50% !important;
+          bottom: -8px !important;
+          margin-left: -17px !important;
+          filter: blur(2px) !important;
         }
 
         /* Custom popup styling */
+        .custom-popup-google-style {
+          z-index: 1000 !important;
+        }
+        
         .custom-popup-google-style .leaflet-popup-content-wrapper {
           border-radius: 8px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
           border: 1px solid #e5e7eb;
           padding: 0;
+          background: white;
+          z-index: 1000 !important;
         }
         
         .custom-popup-google-style .leaflet-popup-content {
           margin: 0;
           padding: 12px;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          min-width: 180px;
         }
         
         .custom-popup-google-style .leaflet-popup-tip {
           background: white;
           border: 1px solid #e5e7eb;
+          z-index: 1000 !important;
+        }
+        
+        .leaflet-popup {
+          z-index: 1000 !important;
+          pointer-events: auto !important;
         }
 
         /* Custom tooltip */

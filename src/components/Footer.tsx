@@ -7,7 +7,6 @@ const Footer = () => {
   const quickLinks = [
     { href: "/", label: "Beranda" },
     { href: "/tentang", label: "Tentang Kami" },
-    { href: "/potensi", label: "Potensi" },
     { href: "/galeri", label: "Galeri" },
     { href: "/kontak", label: "Kontak" },
   ];
@@ -27,7 +26,7 @@ const Footer = () => {
               <span className="font-bold text-xl">Mekarjaya</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident excepturi non iste autem nam facilis culpa, asperiores explicabo, ipsam, sed consectetur porro odit quibusdam!
+              Mekarjaya adalah sebuah desa di Kecamatan Compreng, Kabupaten Subang, Jawa Barat, Indonesia. 
             </p>
           </div>
 
@@ -72,22 +71,10 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
                 <div className="text-gray-300 text-sm">
-                  <p>Desa Contoh</p>
-                  <p>Kecamatan Contoh</p>
-                  <p>Kabupaten Contoh, 12345</p>
+                  <p>Desa Mekarjaya</p>
+                  <p>Kecamatan Compreng</p>
+                  <p>Kabupaten Subang, 41258</p>
                 </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-green-500 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">+62 123 4567 890</span>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-green-500 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">
-                  info@potensidesa.id
-                </span>
               </div>
             </div>
           </div>

@@ -34,7 +34,7 @@ export default function Home() {
             <span className="block text-green-600 mt-2">DESA MEKARJAYA</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque cupiditate asperiores nisi. Quam, commodi?
+            Sebuah desa dengan potensi luar biasa yang tersembunyi di balik kesederhanaan. Mari kita jelajahi kekayaan alam dan inovasi masyarakat yang membanggakan.
           </p>
           <div className="mt-8">
             <Link 
@@ -77,7 +77,7 @@ export default function Home() {
                 SANG PENJAGA SAWAH
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ullam cum libero repellendus consequatur adipisci itaque, expedita laboriosam sequi. Totam, iusto nesciunt natus temporibus adipisci ullam nemo at neque beatae, recusandae pariatur quia corrupti optio consequatur quae?
+                Burung hantu bukan hanya predator alami yang mengendalikan populasi hama tikus di area persawahan, tetapi juga menjadi simbol keseimbangan ekosistem di Desa Mekarjaya. Program penangkaran kami telah berhasil meningkatkan populasi burung hantu dan mengurangi ketergantungan petani pada pestisida.
               </p>
               <Link 
                 href="/potensi/penangkaran" 
@@ -101,7 +101,7 @@ export default function Home() {
                 INOVASI DARI LAHAN SEMPIT
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id in minima consequatur et sit quia sed perferendis accusamus dolore. Velit, numquam distinctio. Cum temporibus consectetur reprehenderit facilis beatae nobis tempore porro. Tempora.
+                Dengan lahan yang terbatas, masyarakat Desa Mekarjaya berhasil mengembangkan teknik budidaya mangga menggunakan pola UHDP (Ultra High Density Planting). Metode penanaman super rapat ini memungkinkan penanaman hingga 400 pohon per hektar, jauh melampaui metode konvensional yang hanya 100 pohon per hektar, sehingga produktivitas meningkat secara signifikan.
               </p>
               <Link 
                 href="/potensi/kebun-mangga" 

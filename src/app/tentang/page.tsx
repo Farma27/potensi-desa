@@ -19,20 +19,20 @@ export const metadata: Metadata = {
 export default function TentangPage() {
   const contributors = [
     {
-      name: "Bapak Iwan",
-      role: "Petani Mangga",
-      expertise: "Pertanian Organik, Budidaya Mangga",
+      name: "Bapak Ikwan",
+      role: "Pemilik Kebun Mangga Sidawarna",
+      expertise: "Pertanian, Budidaya Mangga",
       description:
-        "Memimpin Desa Mekarjaya selama 8 tahun dengan fokus pada pengembangan ekonomi lokal dan pelestarian lingkungan.",
-      image: "/profile-kepala-desa.webp",
+        "Pemilik kebun mangga yang menerapkan teknik budidaya mangga inovatif yang meningkatkan produktivitas hingga 40% dengan metode UHDP.",
+      image: "pak-iwan-sq_WwB7kL-5M",
     },
     {
       name: "Bapak Kendi",
-      role: "Koordinator Penangkaran",
-      expertise: "Konservasi Satwa, Pertanian Berkelanjutan",
+      role: "Penanggung Jawab Penangkaran",
+      expertise: "Konservasi Satwa",
       description:
-        "Pelopor teknik budidaya mangga inovatif yang meningkatkan produktivitas hingga 40% dengan metode organik.",
-      image: "/profile-ketua-tani.webp",
+        "Koordinator program penangkaran burung hantu yang bertujuan untuk menjaga populasi dan habitat burung hantu di Desa Mekarjaya.",
+      image: "/pak-kendi-sq_GsZPjBr30",
     },
   ];
 
@@ -58,17 +58,17 @@ export default function TentangPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                Cerita Desa Mekarjaya
+                Tentang Desa Mekarjaya
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Mekarjaya adalah sebuah desa di Kecamatan Compreng, Kabupaten Subang, Jawa Barat, Indonesia. Berada di zona Subang tengah, Terletak disebelah Utara-Timur Laut Kota Subang yang berjarak + 25 Km. Masyarakat Desa Mekarjaya seperti kebanyakan masyarakat daerah lainnya di Kabupaten Subang mayoritas bermata pencaharian sebagai buruh tani.
                 </p>
                 <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                  Desa Mekarjaya memiliki 3 Dusun kewilayahan, yaitu Dusun Sukaresmi, Dusun Sidawarna dan Dusun Sukawera. Desa Mekarjaya memiliki 5 RW dan 20 RT. 
                 </p>
                 <p>
-                  Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                  Di Desa Mekarjaya rata-rata setiap kepala keluarga mempunyai tanaman mangga baik yang ditanam di pekarangan rumah maupun ditanam dalam satu area kebun disepanjang pinggir jalan berjejer pohon mangga serta di sepanjang bantaran sungai Cipunagara tumbuh subur.
                 </p>
               </div>
             </div>

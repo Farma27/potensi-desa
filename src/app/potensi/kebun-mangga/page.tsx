@@ -29,7 +29,7 @@ export default function KebunManggaPage() {
         <section className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-              Kisah di balik Teknik 2 Meter
+              Kisah di balik Teknik UHDP (Ultra High Density Planting)
             </h2>
             <p className="text-lg text-gray-600">Filosofi dan inspirasi dibalik inovasi</p>
           </div>
@@ -39,14 +39,19 @@ export default function KebunManggaPage() {
               <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-orange-500">
                 <h3 className="text-xl font-semibold text-orange-600 mb-3">🚧 Tantangan Lahan Sempit</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam unde dignissimos et. Reprehenderit distinctio, saepe a voluptas vel nulla dolore iste architecto odit mollitia incidunt consequatur harum fuga natus sit impedit modi!
+                  Desa Mekarjaya memiliki lahan pertanian yang terbatas, namun potensi alamnya sangat besar. 
+                  Dengan teknik penanaman mangga yang inovatif, petani dapat memaksimalkan hasil panen 
+                  meskipun hanya menggunakan lahan seluas 2 meter persegi.
                 </p>
               </div>
               
               <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-blue-500">
                 <h3 className="text-xl font-semibold text-blue-600 mb-3">💡 Inspirasi dari Jepang</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eligendi sit eaque ex doloribus nisi dicta, vitae in iste reiciendis odio corporis ipsam voluptatum omnis quam unde. Nemo totam optio repellat voluptas?
+                  Teknik penanaman mangga yang inovatif ini terinspirasi dari metode pertanian di Jepang, 
+                  di mana lahan sempit dimanfaatkan secara maksimal dengan sistem tanam vertikal dan 
+                  pemangkasan yang tepat. Hal ini memungkinkan petani untuk meningkatkan produktivitas 
+                  tanpa perlu memperluas lahan pertanian.
                 </p>
               </div>
             </div>
@@ -177,30 +182,6 @@ export default function KebunManggaPage() {
                     <p className="text-gray-700 text-sm">Aplikasi monitoring dan konsultasi online untuk petani</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-lg p-8 shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-              📈 Proyeksi Dampak dalam 5 Tahun
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-              <div className="border-r border-gray-200 last:border-r-0">
-                <div className="text-3xl font-bold text-orange-600 mb-2">50+</div>
-                <div className="text-gray-700 text-sm">Desa Adopsi</div>
-              </div>
-              <div className="border-r border-gray-200 last:border-r-0">
-                <div className="text-3xl font-bold text-green-600 mb-2">1,000</div>
-                <div className="text-gray-700 text-sm">Petani Terlatih</div>
-              </div>
-              <div className="border-r border-gray-200 last:border-r-0">
-                <div className="text-3xl font-bold text-blue-600 mb-2">500%</div>
-                <div className="text-gray-700 text-sm">Peningkatan Produktivitas</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">Rp 50M</div>
-                <div className="text-gray-700 text-sm">Tambahan Pendapatan</div>
               </div>
             </div>
           </div>
