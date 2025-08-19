@@ -2,10 +2,8 @@
 
 import { ImageKitProvider, Image as IKImage } from '@imagekit/next';
 
-// Re-export ImageKit Provider for convenience
 export { ImageKitProvider };
 
-// Custom ImageKit Image Component with default props
 interface CustomImageKitProps {
   src: string;
   alt: string;
@@ -28,7 +26,6 @@ export const ImageKitImage = ({
   priority = false,
   ...props
 }: CustomImageKitProps) => {
-  // If priority is true, loading should be 'eager', not 'lazy'
   const finalLoading = priority ? 'eager' : loading;
   
   return (
