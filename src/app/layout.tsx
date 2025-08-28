@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://potensi-desa.vercel.app'),
   title: "Potensi Desa - Menampilkan Kekayaan dan Peluang Desa",
   description: "Website resmi yang menampilkan berbagai potensi, wisata, dan peluang ekonomi desa. Temukan kekayaan budaya, produk lokal, dan investasi di desa kami.",
 };
