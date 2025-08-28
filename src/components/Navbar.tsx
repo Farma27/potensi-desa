@@ -19,7 +19,6 @@ const Navbar = () => {
   const menuItems = [
     { href: "/", label: "Beranda" },
     { href: "/tentang", label: "Tentang Kami" },
-    { href: "/potensi", label: "Potensi" },
     { href: "/galeri", label: "Galeri" },
     { href: "/kontak", label: "Kontak" },
   ]
